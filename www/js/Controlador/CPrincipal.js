@@ -1,7 +1,35 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*
+ * CPrincipal.js
  */
 
+$(document).ready(function() {
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+    //for testing in Chrome browser uncomment
+    onDeviceReady();
+});
 
+
+function onDeviceReady() {
+    
+    var _CDefinicoes = new CDefinicoes();
+    _CDefinicoes.setDefaultDefinicoes();
+    
+    _CDefinicoes.setSistemaUnidades("Imperial");
+    _CDefinicoes.setVista("Estação");
+    //verificarRequisitos()
+    
+    //preencherListaEstacoes() 
+    
+
+}
+
+function verificarRequisitos(){
+    // verificar local storage
+}
+
+function preencherListaEstacoes(){
+    //preencher "listaEstacoes" com as estações disponíveis
+    
+    
+}
