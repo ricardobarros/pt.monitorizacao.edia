@@ -4,48 +4,41 @@
  */
 
 
-var CDefinicoes = function (){
+function CDefinicoes(){
     
-    //obter o objecto do modelo
-    this.model = new MDefinicoes();
-    
-    var definicoes = this.model.getDefinicoes;
-    
-    
-    //definir as definições por defeito
-    this.setDefaultDefinicoes = function(){
-        
-        if ($.isEmptyObject((definicoes))){
+    // Update definicoes
+    this.update = function(sistemaUnidades, vista){
+        var definicoes = MDefinicoes.getDefinicoes();
+        if ($.isEmptyObject(definicoes))
             definicoes = new MDefinicoes();
-            definicoes.sistemaUnidades = "Internacional";
-            definicoes.vista = "lista";
-            definicoes.save();
-        }
-        console.log(definicoes.load());
+        definicoes.sistemaUnidades = sistemaUnidades;
+        definicoes.vista = vista;
+        definicoes.save();
     };
     
-    
-    //alterar sistema de unidades
-    this.setSistemaUnidades = function(val){
-        
-        definicoes.sistemaUnidades = val;
+    // set Sistema Unidades  
+    this.setSistemaUnidades = function(sistemaUnidades){
+        var definicoes = MDefinicoes.getDefinicoes();
+        if ($.isEmptyObject(definicoes))
+            definicoes = new MDefinicoes();
+        definicoes.sistemaUnidades = sistemaUnidades;
         definicoes.save();
-        
-        console.log("getSistemaUnidades: ", definicoes.getSistemaUnidades());
-        console.log(definicoes);
     };
     
-    
-    //alterar a vista
-    this.setVista = function(val){
-        
-        definicoes.vista = val;
+    // set Sistema Unidades  
+    this.setVista = function(vista){
+        var definicoes = MDefinicoes.getDefinicoes();
+        if ($.isEmptyObject(definicoes))
+            definicoes = new MDefinicoes();
+        definicoes.vista = vista;
         definicoes.save();
-        
-        console.log(definicoes.getVista());
-        console.log(definicoes);
+    };
+    
+    this.getSistemaUnidades = function(){
+      return MDefinicoes.getDefinicoes().sistemaUnidades;
+    };
+    
+    this.getVista = function(){
+      return MDefinicoes.getDefinicoes().vista;
     };
 };
-
-
-
