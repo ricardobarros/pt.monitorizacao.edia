@@ -11,12 +11,14 @@ $(document).ready(function() {
 
 
 function onDeviceReady() {
+    preencheListaVEstacao();
     
-    var _CDefinicoes = new CDefinicoes();
-    _CDefinicoes.setDefaultDefinicoes();
     
-    _CDefinicoes.setSistemaUnidades("Imperial");
-    _CDefinicoes.setVista("Estação");
+    //var _CDefinicoes = new CDefinicoes();
+    //_CDefinicoes.setDefaultDefinicoes();
+    
+    //_CDefinicoes.setSistemaUnidades("Imperial");
+    //_CDefinicoes.setVista("Estação");
     //verificarRequisitos()
     
     //preencherListaEstacoes() 
