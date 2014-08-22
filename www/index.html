@@ -61,11 +61,7 @@
 
                 <div style="padding: 20px;">
                     <p>Defina qual a estação de monitorização que pretende visualizar no arranque da aplicação.</p>
-                    <ul id="defaultEstacao" data-role="listview" data-inset="true" data-theme="b">
-                        <li data-icon="false"><a href="#" class="estacoes activeEstacao">Albufeira Alqueva<br><span><small>Cotas e volumes.</small></span></a></li>
-                        <li data-icon="false"><a href="#" class="estacoes">Albufeira Pedrogão<br><span><small>Cotas e volumes.</small></span></a></li>
-                        <li data-icon="false"><a href="#" class="estacoes">Albufeira-Ilha<br><span><small>Dados meterológicos.</small></span></a></li>
-                    </ul>
+                    <ul id="ul_defaultEstacao" data-role="listview" data-inset="true" data-theme="b"/>
                 </div>
             </div>
             
@@ -125,8 +121,14 @@
         
 
         <script type="text/javascript" src="cordova.js"></script>
+        
         <script src="js/Controlador/CPrincipal.js" type="text/javascript"></script>
+        
         <script src="js/Modelo/MDefinicoes.js" type="text/javascript"></script>
         <script src="js/Controlador/CDefinicoes.js" type="text/javascript"></script>
+        
+        <script src="js/Modelo/MEstacao.js" type="text/javascript"></script>
+        <script src="js/Controlador/CEstacao.js" type="text/javascript"></script>
+        <script src="js/Vista/VEstacao.js" type="text/javascript"></script>
     </body>
 </html>
